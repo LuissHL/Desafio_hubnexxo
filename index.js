@@ -30,11 +30,11 @@ function perguntar(pergunta) {
       fullPage: false
     });
 
-    console.log("📸 Screenshot gerado: screenshot.png");
+    console.log("Screenshot gerado: screenshot.png");
 
     await browser.close();
 
   } catch (erro) {
-    console.log("❌ Erro:", erro.message);
+    console.log("Erro:", erro.message);
   }
 })();
