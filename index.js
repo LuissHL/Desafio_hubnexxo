@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer";
 import readline from "readline";
+
 // função que pede a url pelo terminal, rodar usando node index.js
 function perguntar(pergunta) {
   const rl = readline.createInterface({
@@ -12,6 +13,7 @@ function perguntar(pergunta) {
     resolve(resposta);
   }));
 }
+
 (async () => {
   try {
     const url = await perguntar("Digite a URL: ");
@@ -34,7 +36,7 @@ function perguntar(pergunta) {
 
     await browser.close();
 
-  } catch (erro) {
+  } catch (erro) {          // Se a url for invalida
     console.log("Erro:", erro.message);
   }
 })();
